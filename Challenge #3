@@ -1,0 +1,16 @@
+#!/bin/python
+
+# Netsted function to get the value of given key on provided object
+def GetValue(data,key):
+    for k in data:
+        if k == key:
+            print(data[key])
+        else:
+            GetValue(data[k],key)
+
+# provide desired object and key
+data = {"a":{"b":{"c":"d"}}}
+key = 'c'
+
+# function call
+GetValue(data,key)
