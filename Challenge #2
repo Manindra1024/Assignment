@@ -1,0 +1,16 @@
+# Install and configure AWS CLI using access key and scret key
+
+# below command will help to set access key, secret key, default region and Outputformat as JSON/YAML
+
+aws configure
+
+# set the output format to JSON
+
+
+# Provide the desired instance ID to get all the metadata in JSON fromat usig below command
+
+aws ec2 describe-instances --instance-ids i-*********
+
+# Below is the example to query a imageID value from the metadata. In the same way, we can retrieve any key value from the instance metadata
+
+aws ec2 describe-instances --query 'Reservations[0].instances[0].ImageId'
